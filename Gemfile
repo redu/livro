@@ -17,6 +17,7 @@ gem 'heroku'
 group :assets do
   gem 'sass-rails'
   gem 'compass-rails'
+  gem 'uglifier'
 end
 
 group :production do
