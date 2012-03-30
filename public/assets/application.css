@@ -1,0 +1,983 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+
+
+*/
+
+/*
+ * jQuery FlexSlider v1.8
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* Browser Resets */
+/* line 15, ../../app/assets/stylesheets/flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 18, ../../app/assets/stylesheets/flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 22, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 23, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 24, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides img {
+  max-width: 100%;
+  display: block;
+}
+
+/* line 25, ../../app/assets/stylesheets/flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 28, ../../app/assets/stylesheets/flexslider.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 29, ../../app/assets/stylesheets/flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 30, ../../app/assets/stylesheets/flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 35, ../../app/assets/stylesheets/flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 40, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider {
+  background: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  zoom: 1;
+}
+
+/* line 41, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 42, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides > li {
+  position: relative;
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+/* line 44, ../../app/assets/stylesheets/flexslider.scss */
+.flex-container {
+  zoom: 1;
+  position: relative;
+}
+
+/* Caption style */
+/* IE rgba() hack */
+/* line 48, ../../app/assets/stylesheets/flexslider.scss */
+.flex-caption {
+  background: none;
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  zoom: 1;
+}
+
+/* line 50, ../../app/assets/stylesheets/flexslider.scss */
+.flex-caption {
+  width: 96%;
+  padding: 2%;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* Direction Nav */
+/* line 53, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav {
+  height: 0;
+}
+
+/* line 54, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li a {
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0;
+  display: block;
+  background: url(../images/bg_direction_nav.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  text-indent: -999em;
+}
+
+/* line 55, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li .next {
+  background-position: -30px 0;
+  right: -20px;
+  top: 39px;
+}
+
+/* line 56, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li .prev {
+  left: 0;
+  top: 39px;
+}
+
+/* line 57, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li .disabled {
+  opacity: .3;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
+/* Control Nav */
+/* line 60, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+}
+
+/* line 61, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 62, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li:first-child {
+  margin: 0;
+}
+
+/* line 63, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li a {
+  width: 13px;
+  height: 13px;
+  display: block;
+  background: url(../images/bg_control_nav.png) no-repeat;
+  cursor: pointer;
+  text-indent: -999em;
+}
+
+/* line 64, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li a:hover {
+  background-position: 0 -13px;
+}
+
+/* line 65, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li a.active {
+  background-position: 0 -26px;
+  cursor: default;
+}
+/* Welcome to Compass. Use this file to write IE specific override styles.
+ * Import this file using the following HTML or equivalent:
+ * <!--[if IE]>
+ *   <link href="/stylesheets/ie.css" media="screen, projection" rel="stylesheet" type="text/css" />
+ * <![endif]--> */
+/* Welcome to Compass. Use this file to define print styles.
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/print.css" media="print" rel="stylesheet" type="text/css" /> */
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/* line 17, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* line 20, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+body {
+  line-height: 1;
+}
+
+/* line 22, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 24, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 26, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+caption, th, td {
+  text-align: left;
+  font-weight: normal;
+  vertical-align: middle;
+}
+
+/* line 28, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q, blockquote {
+  quotes: none;
+}
+/* line 101, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+q:before, q:after, blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+/* line 30, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+a img {
+  border: none;
+}
+
+/* line 114, ../../../../../.rvm/gems/ruby-1.8.7-p352/gems/compass-0.12.1/frameworks/compass/stylesheets/compass/reset/_utilities.scss */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary {
+  display: block;
+}
+
+/*
+ * jQuery FlexSlider v1.8
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the MIT license.
+ * http://www.opensource.org/licenses/mit-license.php
+ */
+/* Browser Resets */
+/* line 14, ../../app/assets/stylesheets/flexslider.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 17, ../../app/assets/stylesheets/flexslider.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 21, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* line 22, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 23, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides img {
+  max-width: 100%;
+  display: block;
+}
+
+/* line 24, ../../app/assets/stylesheets/flexslider.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 27, ../../app/assets/stylesheets/flexslider.scss */
+.slides:after {
+  content: ".";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 28, ../../app/assets/stylesheets/flexslider.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 29, ../../app/assets/stylesheets/flexslider.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 34, ../../app/assets/stylesheets/flexslider.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 39, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider {
+  background: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -o-border-radius: 5px;
+  border-radius: 5px;
+  zoom: 1;
+}
+
+/* line 40, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 41, ../../app/assets/stylesheets/flexslider.scss */
+.flexslider .slides > li {
+  position: relative;
+}
+
+/* Suggested container for "Slide" animation setups. Can replace this with your own, if you wish */
+/* line 43, ../../app/assets/stylesheets/flexslider.scss */
+.flex-container {
+  zoom: 1;
+  position: relative;
+}
+
+/* Caption style */
+/* IE rgba() hack */
+/* line 47, ../../app/assets/stylesheets/flexslider.scss */
+.flex-caption {
+  background: none;
+  -ms-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#4C000000,endColorstr=#4C000000);
+  zoom: 1;
+}
+
+/* line 49, ../../app/assets/stylesheets/flexslider.scss */
+.flex-caption {
+  width: 96%;
+  padding: 2%;
+  margin: 0;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.3);
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.3);
+  font-size: 14px;
+  line-height: 18px;
+}
+
+/* Direction Nav */
+/* line 52, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav {
+  height: 0;
+}
+
+/* line 53, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li a {
+  width: 26px;
+  height: 26px;
+  margin: -13px 0 0;
+  display: block;
+  background: url(../images/bg_direction_nav.png) no-repeat;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+  text-indent: -999em;
+}
+
+/* line 54, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li .next {
+  background-position: -30px 0;
+  right: -20px;
+  top: 39px;
+}
+
+/* line 55, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li .prev {
+  left: 0;
+  top: 39px;
+}
+
+/* line 56, ../../app/assets/stylesheets/flexslider.scss */
+.flex-direction-nav li .disabled {
+  opacity: .3;
+  filter: alpha(opacity=30);
+  cursor: default;
+}
+
+/* Control Nav */
+/* line 59, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -30px;
+  text-align: center;
+}
+
+/* line 60, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li {
+  margin: 0 0 0 5px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 61, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li:first-child {
+  margin: 0;
+}
+
+/* line 62, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li a {
+  width: 13px;
+  height: 13px;
+  display: block;
+  background: url(../images/bg_control_nav.png) no-repeat;
+  cursor: pointer;
+  text-indent: -999em;
+}
+
+/* line 63, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li a:hover {
+  background-position: 0 -13px;
+}
+
+/* line 64, ../../app/assets/stylesheets/flexslider.scss */
+.flex-control-nav li a.active {
+  background-position: 0 -26px;
+  cursor: default;
+}
+
+/* line 12, ../../app/assets/stylesheets/subscriptions.scss */
+body {
+  background: #6bb1c9 url("../images/background.png");
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+}
+
+/* line 18, ../../app/assets/stylesheets/subscriptions.scss */
+.clouds {
+  background: url("../images/cloud-seamless.png") 0 290px repeat-x;
+  height: 900px;
+}
+/* line 22, ../../app/assets/stylesheets/subscriptions.scss */
+.clouds .bg-hack {
+  background: white;
+  height: 575px;
+  width: 100%;
+}
+
+/* line 29, ../../app/assets/stylesheets/subscriptions.scss */
+#container {
+  width: 960px;
+  margin: 0 auto;
+}
+/* line 33, ../../app/assets/stylesheets/subscriptions.scss */
+#container .logotipo {
+  display: block;
+  background: url("../images/logotipo-book.png") no-repeat left center;
+  height: 90px;
+  padding: 30px 0 30px 190px;
+}
+/* line 39, ../../app/assets/stylesheets/subscriptions.scss */
+#container .logotipo a {
+  display: block;
+  font-family: "museo-slab",serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 60px;
+  color: white;
+  text-decoration: none;
+}
+/* line 48, ../../app/assets/stylesheets/subscriptions.scss */
+.textshadow #container .logotipo a {
+  text-shadow: black 1px 0 3px;
+}
+/* line 54, ../../app/assets/stylesheets/subscriptions.scss */
+#container .main-call {
+  height: 475px;
+  color: white;
+}
+/* line 58, ../../app/assets/stylesheets/subscriptions.scss */
+#container .main-call h2, #container .main-call p {
+  width: 580px;
+  margin-left: 190px;
+}
+/* line 63, ../../app/assets/stylesheets/subscriptions.scss */
+#container .main-call h2 {
+  font-family: "museo-sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* line 70, ../../app/assets/stylesheets/subscriptions.scss */
+.textshadow #container .main-call h2 {
+  text-shadow: black 1px 0 2px;
+}
+/* line 75, ../../app/assets/stylesheets/subscriptions.scss */
+#container .main-call p {
+  line-height: 18px;
+}
+/* line 77, ../../app/assets/stylesheets/subscriptions.scss */
+.textshadow #container .main-call p {
+  text-shadow: black 1px 0 2px;
+}
+/* line 83, ../../app/assets/stylesheets/subscriptions.scss */
+#container .download, #container .buy, #container .testimonials {
+  width: 280px;
+  float: left;
+}
+/* line 87, ../../app/assets/stylesheets/subscriptions.scss */
+#container .download h3, #container .buy h3, #container .testimonials h3 {
+  font-family: "museo-sans",sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+/* line 96, ../../app/assets/stylesheets/subscriptions.scss */
+#container .share {
+  padding: 10px 0;
+}
+/* line 99, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form .errors {
+  width: 190px;
+  float: left;
+  margin-top: 5px;
+  margin-left: 3px;
+  color: #ff6d6d;
+  font-size: 11px;
+}
+/* line 108, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form {
+  overflow: hidden;
+  *zoom: 1;
+  margin: 10px 0;
+  padding-left: 5px;
+}
+/* line 112, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form label {
+  display: none;
+}
+/* line 113, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form ul, #container .form li {
+  list-style: none;
+}
+/* line 115, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form input[type=email] {
+  float: left;
+  border: none;
+  width: 180px;
+  padding: 8px;
+  font-size: 11px;
+  border: 1px solid white;
+  background-color: white;
+}
+/* line 125, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form input[type=email]::-webkit-input-placeholder, #container .form input[type=email]::-moz-placeholder {
+  font-style: italic;
+  color: #b3b3b3;
+}
+/* line 130, ../../app/assets/stylesheets/subscriptions.scss */
+.no-boxshadow #container .form input[type=email] {
+  border: 1px solid  gray;
+}
+/* line 133, ../../app/assets/stylesheets/subscriptions.scss */
+.boxshadow #container .form input[type=email] {
+  outline: none;
+  -webkit-box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.4);
+  -moz-box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.4);
+  box-shadow: 1px 0 2px 1px rgba(0, 0, 0, 0.4);
+}
+/* line 137, ../../app/assets/stylesheets/subscriptions.scss */
+.boxshadow #container .form input[type=email]:focus {
+  -webkit-box-shadow: 1px 0 1px 1px rgba(115, 195, 230, 0.4);
+  -moz-box-shadow: 1px 0 1px 1px rgba(115, 195, 230, 0.4);
+  box-shadow: 1px 0 1px 1px rgba(115, 195, 230, 0.4);
+}
+/* line 140, ../../app/assets/stylesheets/subscriptions.scss */
+.borderradius #container .form input[type=email] {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 143, ../../app/assets/stylesheets/subscriptions.scss */
+.cssgradients #container .form input[type=email] {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f0f0f0), color-stop(100%, #ffffff));
+  background-image: -webkit-linear-gradient(#f0f0f0, #ffffff);
+  background-image: -moz-linear-gradient(#f0f0f0, #ffffff);
+  background-image: -o-linear-gradient(#f0f0f0, #ffffff);
+  background-image: -ms-linear-gradient(#f0f0f0, #ffffff);
+  background-image: linear-gradient(#f0f0f0, #ffffff);
+}
+/* line 147, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form input[type=email]:focus {
+  border: 1px solid #73c3e6;
+  background-image: none;
+  background-color: white;
+}
+/* line 154, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form button {
+  float: right;
+  border: 1px solid #4dadd6;
+  width: 68px;
+  margin-top: 3px;
+  height: 30px;
+  color: white;
+  font-size: 12px;
+  background-color: #73c3e6;
+}
+/* line 164, ../../app/assets/stylesheets/subscriptions.scss */
+.cssgradients #container .form button {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #73c3e6), color-stop(100%, #4cacd5));
+  background-image: -webkit-linear-gradient(#73c3e6, #4cacd5);
+  background-image: -moz-linear-gradient(#73c3e6, #4cacd5);
+  background-image: -o-linear-gradient(#73c3e6, #4cacd5);
+  background-image: -ms-linear-gradient(#73c3e6, #4cacd5);
+  background-image: linear-gradient(#73c3e6, #4cacd5);
+}
+/* line 167, ../../app/assets/stylesheets/subscriptions.scss */
+.cssgradients #container .form button:hover {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #73c3e6), color-stop(100%, #158ac4));
+  background-image: -webkit-linear-gradient(#73c3e6, #158ac4);
+  background-image: -moz-linear-gradient(#73c3e6, #158ac4);
+  background-image: -o-linear-gradient(#73c3e6, #158ac4);
+  background-image: -ms-linear-gradient(#73c3e6, #158ac4);
+  background-image: linear-gradient(#73c3e6, #158ac4);
+}
+/* line 170, ../../app/assets/stylesheets/subscriptions.scss */
+.borderradius #container .form button {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 173, ../../app/assets/stylesheets/subscriptions.scss */
+.textshadow #container .form button {
+  text-shadow: #158ac4 -1px 0 0;
+}
+/* line 177, ../../app/assets/stylesheets/subscriptions.scss */
+#container .form button:hover {
+  background-color: #158ac4;
+  border: 1px solid #158ac4;
+}
+/* line 184, ../../app/assets/stylesheets/subscriptions.scss */
+#container .download p, #container .buy p {
+  line-height: 18px;
+  color: #b3b3b3;
+}
+/* line 188, ../../app/assets/stylesheets/subscriptions.scss */
+#container .download a, #container .buy a {
+  color: #73c3e6;
+  text-decoration: none;
+}
+/* line 194, ../../app/assets/stylesheets/subscriptions.scss */
+#container .download {
+  margin-left: 190px;
+  margin-right: 20px;
+}
+/* line 199, ../../app/assets/stylesheets/subscriptions.scss */
+#container .testimonials {
+  margin-top: 25px;
+  margin-left: 130px;
+  clear: both;
+  width: 700px;
+}
+/* line 205, ../../app/assets/stylesheets/subscriptions.scss */
+#container .testimonials h3, #container .testimonials ul {
+  margin-left: 50px;
+}
+/* line 207, ../../app/assets/stylesheets/subscriptions.scss */
+.opacity #container .testimonials .prev:hover, .opacity #container .testimonials .next:hover {
+  opacity: 0.8;
+}
+/* line 211, ../../app/assets/stylesheets/subscriptions.scss */
+#container .testimonials .slides {
+  width: 630px;
+}
+/* line 215, ../../app/assets/stylesheets/subscriptions.scss */
+#container .testimonials .slides li {
+  height: 120px;
+}
+/* line 219, ../../app/assets/stylesheets/subscriptions.scss */
+#container .testimonials blockquote {
+  line-height: 18px;
+  color: #6d6e6f;
+  font-size: 13px;
+}
+/* line 225, ../../app/assets/stylesheets/subscriptions.scss */
+#container .testimonials .who, #container .testimonials .who2 {
+  display: block;
+  text-align: right;
+  font-family: "Museo Sans", serif;
+  font-weight: 100;
+  font-size: 18px;
+}
+/* line 233, ../../app/assets/stylesheets/subscriptions.scss */
+#container .testimonials .who2 {
+  font-size: 14px;
+}
+
+/* line 240, ../../app/assets/stylesheets/subscriptions.scss */
+.footer {
+  height: 191px;
+  background-color: #73c3e6;
+}
+/* line 244, ../../app/assets/stylesheets/subscriptions.scss */
+.cssgradients .footer {
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #73c3e6), color-stop(100%, #1789c3));
+  background-image: -webkit-linear-gradient(#73c3e6, #1789c3);
+  background-image: -moz-linear-gradient(#73c3e6, #1789c3);
+  background-image: -o-linear-gradient(#73c3e6, #1789c3);
+  background-image: -ms-linear-gradient(#73c3e6, #1789c3);
+  background-image: linear-gradient(#73c3e6, #1789c3);
+}
+/* line 248, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .wrapper {
+  width: 960px;
+  margin: 0 auto;
+}
+/* line 253, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .logo-footer {
+  width: 240px;
+  height: 77px;
+}
+/* line 258, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .logo-footer a {
+  display: block;
+  text-indent: -99999px;
+  background: url("../images/redutech-low-horiz-a.png") no-repeat;
+  width: 240px;
+  height: 77px;
+  overflow: hidden;
+}
+/* line 268, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-text {
+  margin-left: 20px;
+}
+/* line 269, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-text, .footer .our-address {
+  line-height: 15px;
+  margin-right: 20px;
+  font-size: 11px;
+  color: white;
+  width: 290px;
+  float: left;
+}
+/* line 277, ../../app/assets/stylesheets/subscriptions.scss */
+.textshadow .footer .about-text, .textshadow .footer .our-address {
+  text-shadow: #1789c3 0 -1px 0;
+}
+/* line 282, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .our-address {
+  padding-top: 18px;
+  background: url("../images/icone-geolocal-branco-12.png") no-repeat;
+  width: 170px;
+  margin-right: 160px;
+}
+/* line 289, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-redu {
+  width: 120px;
+  margin-right: 20px;
+}
+/* line 294, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .politics-terms {
+  width: 160px;
+}
+/* line 298, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-redu, .footer .politics-terms {
+  float: left;
+}
+/* line 301, ../../app/assets/stylesheets/subscriptions.scss */
+.textshadow .footer .about-redu, .textshadow .footer .politics-terms {
+  text-shadow: #6d6e6f -1px 0 0;
+}
+/* line 305, ../../app/assets/stylesheets/subscriptions.scss */
+.textshadow .footer .about-redu:hover, .textshadow .footer .politics-terms:hover {
+  text-shadow: none;
+}
+/* line 309, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-redu li, .footer .politics-terms li {
+  padding: 5px;
+}
+/* line 312, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-redu li a, .footer .politics-terms li a {
+  padding: 5px;
+}
+/* line 314, ../../app/assets/stylesheets/subscriptions.scss */
+.borderradius .footer .about-redu li a:hover, .borderradius .footer .politics-terms li a:hover {
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+  border-radius: 3px;
+}
+/* line 317, ../../app/assets/stylesheets/subscriptions.scss */
+.boxshadow .footer .about-redu li a:hover, .boxshadow .footer .politics-terms li a:hover {
+  -webkit-box-shadow: 0 1px 0 0 #6d6e6f;
+  -moz-box-shadow: 0 1px 0 0 #6d6e6f;
+  box-shadow: 0 1px 0 0 #6d6e6f;
+}
+/* line 320, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-redu li a:hover, .footer .politics-terms li a:hover {
+  background-color: white;
+  color: #158ac4;
+}
+/* line 330, ../../app/assets/stylesheets/subscriptions.scss */
+.footer .about-redu a, .footer .politics-terms a {
+  color: white;
+  font-size: 12px;
+  text-decoration: none;
+}
