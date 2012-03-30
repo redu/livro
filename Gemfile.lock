@@ -32,6 +32,13 @@ GEM
     arel (3.0.2)
     builder (3.0.0)
     chunky_png (1.2.5)
+    coffee-rails (3.2.2)
+      coffee-script (>= 2.2.0)
+      railties (~> 3.2.0)
+    coffee-script (2.2.0)
+      coffee-script-source
+      execjs
+    coffee-script-source (1.2.0)
     compass (0.12.1)
       chunky_png (~> 1.2)
       fssm (>= 0.2.7)
@@ -60,6 +67,7 @@ GEM
     json (1.6.6)
     launchy (2.1.0)
       addressable (~> 2.2.6)
+    libv8 (3.3.10.4)
     mail (2.4.4)
       i18n (>= 0.4.0)
       mime-types (~> 1.16)
@@ -107,6 +115,8 @@ GEM
       rack (~> 1.0)
       tilt (!= 1.3.0, ~> 1.1)
     sqlite3 (1.3.5)
+    therubyracer (0.9.9)
+      libv8 (~> 3.3.10)
     thin (1.3.1)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -126,6 +136,7 @@ PLATFORMS
 
 DEPENDENCIES
   bundler
+  coffee-rails (~> 3.2.1)
   compass-rails
   formtastic
   heroku
@@ -133,7 +144,8 @@ DEPENDENCIES
   json
   pg
   rails (~> 3.2.1)
-  sass-rails
+  sass-rails (~> 3.2.3)
   sqlite3
+  therubyracer
   thin
-  uglifier
+  uglifier (>= 1.0.3)
