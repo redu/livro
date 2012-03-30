@@ -1,5 +1,6 @@
 source 'https://rubygems.org'
 
+gem 'bundler'
 gem 'rails', '~> 3.2.1'
 
 # Bundle edge Rails instead:
@@ -19,7 +20,7 @@ group :assets do
 end
 
 group :production do
-  gem 'ps'
+  gem 'pg'
   gem 'thin'
 end
 
