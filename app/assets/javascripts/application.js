@@ -12,16 +12,3 @@
 //
 //= require jquery_ujs
 //= require_tree .
-
-downloadURL = function(url) {
-  var iframe;
-  iframe = document.getElementById("hiddenDownloader");
-  if (iframe === null)
-  {
-    iframe = document.createElement('iframe');
-    iframe.id = "hiddenDownloader";
-    iframe.style.visibility = 'hidden';
-    document.body.appendChild(iframe);
-  }
-  iframe.src = url;
-}

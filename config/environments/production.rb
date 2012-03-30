@@ -20,7 +20,7 @@ LivroBackend::Application.configure do
   # Generate digests for assets URLs
   config.assets.digest = true
 
-  config.static_cache_control = "public, max-age=3600"
+  config.static_cache_control = "public, max-age=604800"
 
   # Defaults to Rails.root.join("public/assets")
   # config.assets.manifest = YOUR_PATH
