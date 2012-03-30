@@ -16,7 +16,7 @@
     <% if flash[:can_download] %>
       <div class="share">
         <%= link_to "Faca download e ", "#" %>
-        <%= link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=http://dl.dropbox.com/u/77225/livro/index.html", :name => 'fb_share', :type => 'button', :share_url => "http://dl.dropbox.com/u/77225/livro/index.html"  %>
+        <%= link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=http://educarcom.redu.com.br/", :name => 'fb_share', :type => 'button', :share_url => "http://educarcom.redu.com.br/"  %>
       </div>
     <% else %>
       <%= semantic_form_for @subscription || Subscription.new, :html => { :class => 'form' } do |f| %>
