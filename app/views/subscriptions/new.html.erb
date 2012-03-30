@@ -1,0 +1,107 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Educar com o Redu</title>
+  <%= stylesheet_link_tag "application" %>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.2/jquery.min.js"></script>
+  <%= javascript_include_tag "application" %>
+  <script type="text/javascript" charset="utf-8">
+    $(window).load(function() {
+      $('.flexslider').flexslider();
+    });
+  </script>
+  <script type="text/javascript" src="http://use.typekit.com/lpo4rgu.js"></script>
+  <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+  <script src="http://static.ak.fbcdn.net/connect.php/js/FB.Share" type="text/javascript"></script>
+  <link rel="image_src" type="image/jpeg" href="images/icon-facebook.gif" />
+</head>
+<body>
+<div class="clouds">
+<div id="container">
+  <section class="main-call">
+    <header>
+      <h1 class="logotipo"><a href="#">Educar com o Redu</a></h1>
+    </header>
+    <h2>Professor otimize seu tempo e conquiste seus alunos com o Redu</h2>
+    <p>O livro “Educar com o Redu” apresenta o ambiente virtual de aprendizagem Redu como uma evolução das tecnologias educacionais, tendo como base os conceitos de teorias de aprendizagem, colaboração e prática de ensino. Os autores promovem uma detalhada visão do novo ambiente e descrevem os fenômenos cognitivos e sociais que podem ocorrer nas escolas e nas instituições de ensino superior. </p>
+  </section>
+
+  <section class="download">
+    <header>
+    <h3>Baixe já, é grátis.</h3>
+    </header>
+    <p>Para iniciar o download, digite um endereço de e-mail e mantenha-se informado sobre as novidades do Redu.</p>
+    <% if flash[:can_download] %>
+      <div class="share">
+        <%= link_to "Faca download e ", "#" %>
+        <%= link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=http://dl.dropbox.com/u/77225/livro/index.html", :name => 'fb_share', :type => 'button', :share_url => "http://dl.dropbox.com/u/77225/livro/index.html"  %>
+      </div>
+    <% else %>
+      <%= semantic_form_for @subscription || Subscription.new, :html => { :class => 'form' } do |f| %>
+        <%= f.email_field :email, :placeholder => 'Digite seu endereço de e-mail' %>
+        <%= f.button "Baixar"  %>
+        <%= f.semantic_errors :email %>
+      <% end %>
+    <% end %>
+  </section>
+
+  <section class="buy">
+    <header>
+    <h3>Compre o livro impresso.</h3>
+    </header>
+    <p>Através do Bookess – um serviço de venda de livros impressos sob demanda – você pode obter uma cópia física do livro. Ideal para quem se sente mais confortável lendo algo que não seja digital. <a href="#">Saiba mais</a>.</p>
+  </section>
+
+  <section class="testimonials">
+    <header>
+      <h3>Depoimentos</h3>
+    </header>
+    <div class="flexslider">
+    <ul class="slides">
+      <li>
+        <blockquote>
+          O Redu propõe uma nova cara para os AVAs, incorporando recursos de ambientes informais, como redes sociais. Assim, é uma iniciativa que procura fugir do fordismo, que marca a EaD no Brasil, em direção a uma educação interativa e colaborativa.
+        </blockquote>
+        <span class="who">Romero Tori</span>
+        <span class="who2">Ph.D., Escola Politécnica da USP</span>
+      </li>
+      <li>
+        <blockquote>
+          O Redu é como um bálsamo para os problemas da Educação.
+        </blockquote>
+        <span class="who">Margareth Zaponi</span>
+        <span class="who2">Secretária Executiva de Gestão de Rede, Secretaria de Educação do Estado de Pernambuco</span>
+      </li>
+      <li>
+        <blockquote>
+          O Redu propõe uma nova cara para os AVAs, incorporando recursos de ambientes informais, como redes sociais. Assim, é uma iniciativa que procura fugir do fordismo, que marca
+a EaD no Brasil, em direção a uma educação interativa e colaborativa.
+        </blockquote>
+        <span class="who">João Mattar</span>
+        <span class="who2">Ph.D., TIDD-PUC-SP</span>
+      </li>
+    </ul>
+  </div>
+  </section>
+</div><!-- end #container -->
+  <div class="bg-hack"></div>
+</div><!-- .clouds -->
+<footer class="footer">
+  <div class="wrapper">
+    <h1 class="logo-footer"><a href="http://www.redu.com.br">Redu</a></h1>
+    <p class="about-text">Somos uma pequena startup brasileira, recifense e estamos incubados pelo Porto Digital. Nossa equipe é composta por pessoas dedicadas e comprometidas com um objetivo em comum: desenvolver produtos que façam a diferença para uma educação mais acessível e universal.</p>
+    <address class="our-address">Rua do Apolo, 181 <br>Cais do Apolo, Recife<br> Brasil CNPJ: 12.359.885/0001-07</address>
+    <ul class="about-redu">
+      <li class="list"><a href="http://www.redu.com.br">Página Inicial</a></li>
+      <li class="list"><a href="http://blog.redu.com.br/">Visite nosso Blog</a></li>
+    </ul>
+    <ul class="politics-terms">
+      <li class="list"><a href="http://www.redu.com.br/privacy">Política de Privacidade</a></li>
+      <li class="list"><a href="http://www.redu.com.br/tos">Termos de Uso</a></li>
+      <li class="list"><a href="http://www.redu.com.br/contato">Fale conosco</a></li>
+    </ul>
+  </div>
+</footer>
+</body>
+</html>

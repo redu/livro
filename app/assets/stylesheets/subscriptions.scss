@@ -1,0 +1,336 @@
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+
+@import "compass/reset";
+@import "compass/css3";
+@import "compass/utilities/general/clearfix";
+@import "flexslider";
+
+body {
+  background: rgb(107,177,201) url("../images/background.png");
+  font-family:  "Helvetica Neue", Arial, sans-serif;
+  font-size: 13px;
+}
+
+.clouds {
+  background: url("../images/cloud-seamless.png") 0 290px repeat-x;
+  height: 900px;
+
+  .bg-hack {
+    background: white;
+    height: 575px;
+    width: 100%;
+  }
+}
+
+#container {
+  width: 960px;
+  margin: 0 auto;
+
+  .logotipo {
+    display: block;
+    background: url("../images/logotipo-book.png") no-repeat left center;
+    height: 90px;
+    padding: 30px 0 30px 190px;
+
+    a {
+      display: block;
+      font-family: "museo-slab",serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 60px;
+      color: white;
+      text-decoration: none;
+
+      .textshadow & {
+        @include single-text-shadow(black, 1px, 0, 3px);
+      }
+    }
+  }
+
+  .main-call {
+    height: 475px;
+    color: white;
+
+    h2, p  {
+      width: 580px;
+      margin-left: 190px;
+    }
+
+    h2 {
+      font-family: "museo-sans",sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 10px;
+
+      .textshadow & {
+        @include single-text-shadow(black, 1px, 0, 2px);
+      }
+    }
+
+    p {
+      line-height: 18px;
+      .textshadow & {
+        @include single-text-shadow(black, 1px, 0, 2px);
+      }
+    }
+  }
+
+  .download, .buy, .testimonials {
+    width: 280px;
+    float: left;
+
+    h3 {
+      font-family: "museo-sans",sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+  }
+
+  .share {
+    padding: 10px 0;
+  }
+  .form .errors {
+    width: 190px;
+    float: left;
+    margin-top: 5px;
+    margin-left: 3px;
+    color: rgb(255, 109, 109);
+    font-size: 11px;
+  }
+
+  .form {
+    @include clearfix;
+    margin: 10px 0;
+    padding-left: 5px;
+    label { display: none; }
+    ul, li { list-style: none; }
+  }
+  .form input[type=email] {
+    float: left;
+    border: none;
+    width: 180px;
+    padding: 8px;
+    font-size: 11px;
+    border: 1px solid white;
+    background-color: white;
+
+    &::-webkit-input-placeholder,
+    &::-moz-placeholder {
+      font-style: italic;
+      color: rgb(179,179,179);
+    }
+
+    .no-boxshadow & {
+      border: 1px solid  gray;
+    }
+    .boxshadow & {
+      outline: none;
+      @include single-box-shadow(transparentize(black,0.6), 1px, 0, 2px, 1px);
+    }
+    .boxshadow &:focus {
+      @include single-box-shadow(transparentize(rgb(115,195,230),0.6), 1px, 0, 1px, 1px);
+    }
+    .borderradius & {
+      @include border-radius(3px);
+    }
+    .cssgradients & {
+       @include background-image(linear-gradient(rgb(240,240,240), white));
+    }
+
+    &:focus {
+      border: 1px solid rgb(115,195,230);
+      background-image: none;
+      background-color: white;
+    }
+  }
+
+  .form button {
+    float: right;
+    border: 1px solid rgb(77,173,214);
+    width: 68px;
+    margin-top: 3px;
+    height: 30px;
+    color: white;
+    font-size: 12px;
+    background-color: rgb(115,195,230);
+
+    .cssgradients & {
+       @include background-image(linear-gradient(rgb(115,195,230),rgb(76,172,213)));
+    }
+    .cssgradients &:hover {
+       @include background-image(linear-gradient(rgb(115,195,230), rgb(21,138,196)));
+    }
+    .borderradius & {
+      @include border-radius(3px);
+    }
+    .textshadow & {
+      @include single-text-shadow(rgb(21, 138, 196), -1px, 0, 0);
+    }
+
+    &:hover {
+      background-color: rgb(21,138,196);
+      border: 1px solid rgb(21,138,196);
+    }
+  }
+
+  .download, .buy {
+    p {
+      line-height: 18px;
+      color: rgb(179,179,179);
+    }
+    a {
+      color: rgb(115,195,230);
+      text-decoration: none;
+    }
+  }
+
+  .download {
+    margin-left: 190px;
+    margin-right: 20px;
+  }
+
+  .testimonials {
+    margin-top: 25px;
+    margin-left: 130px;
+    clear: both;
+    width: 700px;
+
+    h3, ul { margin-left: 50px; }
+
+    .opacity & .prev:hover, .opacity & .next:hover {
+      opacity: 0.8;
+    }
+
+    .slides {
+      width: 630px;
+    }
+
+    .slides li {
+      height: 120px;
+    }
+
+    blockquote {
+      line-height: 18px;
+      color: rgb(109,110,111);
+      font-size: 13px;
+    }
+
+    .who, .who2 {
+      display: block;
+      text-align: right;
+      font-family: "Museo Sans", serif;
+      font-weight: 100;
+      font-size: 18px;
+    }
+
+    .who2 {
+      font-size: 14px;
+    }
+  }
+
+}
+
+.footer {
+  height: 191px;
+
+  background-color: rgb(115,195,230);
+  .cssgradients & {
+    @include background-image(linear-gradient(rgb(115,195,230),rgb(23,137,195)));
+  }
+
+  .wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  .logo-footer {
+    width: 240px;
+    height: 77px;
+  }
+
+  .logo-footer a {
+    display: block;
+    text-indent: -99999px;
+    background: url("../images/redutech-low-horiz-a.png") no-repeat;
+    width: 240px;
+    height: 77px;
+    overflow: hidden;
+
+  }
+
+  .about-text { margin-left: 20px; }
+  .about-text, .our-address {
+    line-height: 15px;
+    margin-right: 20px;
+    font-size: 11px;
+    color:white;
+    width: 290px;
+    float: left;
+
+    .textshadow & {
+      @include single-text-shadow(rgb(23, 137, 195), 0, -1px, 0);
+    }
+  }
+
+  .our-address {
+    padding-top: 18px;
+    background: url("../images/icone-geolocal-branco-12.png") no-repeat;
+    width: 170px;
+    margin-right: 160px;
+  }
+
+  .about-redu {
+    width: 120px;
+    margin-right: 20px;
+  }
+
+  .politics-terms {
+    width: 160px;
+  }
+
+  .about-redu, .politics-terms {
+    float: left;
+
+    .textshadow & {
+      @include single-text-shadow(rgb(109,110,111), -1px, 0, 0);
+    }
+
+    .textshadow &:hover {
+      @include single-text-shadow(none);
+    }
+
+    li {
+      padding: 5px;
+
+      a {
+        padding: 5px;
+        .borderradius &:hover {
+          @include border-radius(3px);
+        }
+        .boxshadow &:hover {
+          @include single-box-shadow(rgb(109, 110, 111), 0, 1px, 0, 0);
+        }
+        &:hover {
+          background-color: white;
+          color: rgb(21, 138, 196);
+        }
+      }
+    }
+
+    .footer .item-menu a:hover {
+    }
+
+    a {
+      color: white;
+      font-size: 12px;
+      text-decoration: none;
+    }
+  }
+}
+
