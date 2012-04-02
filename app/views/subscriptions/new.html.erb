@@ -15,7 +15,7 @@
     <p>Para iniciar o download, digite um endereço de e-mail e mantenha-se informado sobre as novidades do Redu.</p>
     <% if flash[:can_download] %>
       <div class="share">
-        <%= link_to "Faca download e ", "#" %>
+        <%= link_to "Faca download e ", "http://redu-public.s3.amazonaws.com/Educar-com-o-Redu-96dpi.pdf", :target => '_BLANK' %>
         <%= link_to "Compartilhe no Facebook", "https://www.facebook.com/sharer/sharer.php?u=http://educarcom.redu.com.br/", :name => 'fb_share', :type => 'button', :share_url => "http://educarcom.redu.com.br/"  %>
       </div>
     <% else %>
@@ -42,7 +42,7 @@
     <ul class="slides">
       <li>
         <blockquote>
-          O Redu propõe uma nova cara para os AVAs, incorporando recursos de ambientes informais, como redes sociais. Assim, é uma iniciativa que procura fugir do fordismo, que marca a EaD no Brasil, em direção a uma educação interativa e colaborativa.
+          O Redu é uma importante iniciativa que possibilita um novo paradigma de ambiente virtual de aprendizagem, no qual professores, alunos e conteúdos convivem, interagem e se aproximam, sem barreiras, sem burocracias, sem distância transacional.
         </blockquote>
         <span class="who">Romero Tori</span>
         <span class="who2">Ph.D., Escola Politécnica da USP</span>
